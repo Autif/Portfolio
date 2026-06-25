@@ -1,0 +1,78 @@
+.services { background: var(--navy); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.svc-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+
+.svc-title {
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.svc-desc {
+  font-size: 0.88rem;
+  color: var(--silver);
+  line-height: 1.7;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.svc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.svc-list li {
+  font-size: 0.82rem;
+  color: var(--silver);
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.svc-check {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.svc-accent-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.service-card:hover .svc-accent-bar { opacity: 1; }
+
+@media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .services-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,223 @@
+.projects { background: var(--navy-mid); }
+
+/* ─── Featured ─── */
+.project-featured {
+  padding: 48px;
+  margin-bottom: 32px;
+  background: var(--slate);
+  border-color: rgba(0, 212, 255, 0.12);
+}
+
+.featured-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.proj-number {
+  font-family: var(--font-mono);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.3;
+  margin-bottom: 8px;
+}
+
+.proj-category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--silver-dim);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.proj-title {
+  font-size: 1.55rem;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.proj-desc {
+  color: var(--silver);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.proj-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.ph-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.87rem;
+  color: var(--silver);
+  line-height: 1.5;
+}
+
+.ph-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+
+.proj-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ─── Mockup ─── */
+.mockup-window {
+  background: #0d1117;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+
+.mw-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #161b24;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.mw-dots { display: flex; gap: 5px; }
+.mw-dots span {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+}
+.mw-bar {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--silver-dim);
+  background: rgba(255,255,255,0.04);
+  padding: 3px 12px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.mw-body { padding: 20px; }
+.mw-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.mw-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--silver-dim);
+  width: 120px;
+  flex-shrink: 0;
+}
+.mw-bar-viz {
+  height: 6px;
+  border-radius: 3px;
+  opacity: 0.6;
+  transition: width 1s ease;
+}
+.mw-stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+.mw-stat { text-align: center; }
+.mw-stat-val {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 6px 4px;
+  background: rgba(0, 212, 255, 0.06);
+  border-radius: 4px;
+}
+
+/* ─── Grid ─── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-number-sm {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: 0.3;
+  margin-bottom: 6px;
+}
+
+.proj-title-sm {
+  font-size: 1.1rem;
+  color: var(--white);
+  margin: 10px 0 12px;
+  line-height: 1.35;
+}
+
+.proj-desc-sm {
+  font-size: 0.87rem;
+  color: var(--silver);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.proj-highlights-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.ph-item-sm {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--silver);
+  line-height: 1.4;
+}
+.ph-dot-sm {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.proj-stack-sm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+@media (max-width: 1024px) {
+  .featured-content { grid-template-columns: 1fr; gap: 40px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 680px) {
+  .project-featured { padding: 28px 20px; }
+  .projects-grid { grid-template-columns: 1fr; }
+}

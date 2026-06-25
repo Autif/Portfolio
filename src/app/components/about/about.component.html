@@ -1,0 +1,59 @@
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-left reveal" #reveal>
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Building the backbone of <span class="cyan">educational technology</span></h2>
+        <div class="accent-line"></div>
+
+        <p class="about-text">
+          I'm a Senior Full-Stack Engineer with 6+ years of experience building enterprise-scale
+          educational platforms entirely from scratch. Based in Jammu & Kashmir, India, and working
+          remotely with clients in Saudi Arabia, I specialize in the full stack —
+          from PostgreSQL stored procedures to polished Angular SPAs.
+        </p>
+        <p class="about-text">
+          My core focus is correctness and performance under load: atomic database operations,
+          minimal cache round-trips, Redis pub/sub invalidation, and AI-assisted grading pipelines
+          that handle diverse question types at scale. I don't just write features — I design systems.
+        </p>
+
+        <div class="about-meta">
+          <div class="meta-item">
+            <span class="meta-icon">📍</span>
+            <span>Jammu & Kashmir, India</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">🎓</span>
+            <span>B.E. Computer Science, University of Kashmir (2016)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">📧</span>
+            <a href="mailto:autifshafi92@gmail.com">autifshafi92&#64;gmail.com</a>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">📱</span>
+            <span>+91 6005359099</span>
+          </div>
+        </div>
+
+        <div class="about-actions">
+          <a href="mailto:autifshafi92@gmail.com" class="btn btn-primary">Let's Talk</a>
+          <a href="https://linkedin.com/in/autif-shafi-a7b621142" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <div class="highlights-grid">
+          <div class="highlight-card card reveal" #reveal
+               *ngFor="let h of highlights; let i = index"
+               [style.animation-delay]="(i * 0.1) + 's'">
+            <div class="highlight-icon">{{ h.icon }}</div>
+            <h4 class="highlight-title">{{ h.title }}</h4>
+            <p class="highlight-desc">{{ h.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<nav class="navbar" [class.scrolled]="scrolled">
+  <div class="nav-inner container">
+    <div class="nav-brand" (click)="scrollTo('home')">
+      <span class="brand-bracket">&lt;</span>
+      <span class="brand-name">Autif</span>
+      <span class="brand-bracket">/&gt;</span>
+    </div>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li *ngFor="let link of navLinks">
+        <button
+          class="nav-link"
+          [class.active]="activeSection === link.id"
+          (click)="scrollTo(link.id)">
+          {{ link.label }}
+        </button>
+      </li>
+      <li>
+        <a href="mailto:autifshafi92@gmail.com" class="btn btn-primary nav-cta">Hire Me</a>
+      </li>
+    </ul>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="menuOpen" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,23 @@
+<section id="skills" class="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Technical Expertise</div>
+      <h2 class="section-title">The tools behind <span class="cyan">enterprise systems</span></h2>
+      <p class="section-subtitle">
+        A focused stack built around .NET, Angular, and PostgreSQL — extended with caching, AI, and real-time layers.
+      </p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-cat card" *ngFor="let cat of categories">
+        <div class="cat-header">
+          <span class="cat-icon">{{ cat.icon }}</span>
+          <h3 class="cat-label">{{ cat.label }}</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="tag" *ngFor="let s of cat.skills">{{ s }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

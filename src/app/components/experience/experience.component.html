@@ -1,0 +1,60 @@
+<section id="experience" class="experience">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Career</div>
+      <h2 class="section-title">Experience that <span class="cyan">ships systems</span></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let job of jobs; let i = index">
+        <div class="tl-connector">
+          <div class="tl-dot" [class.current]="job.current"></div>
+          <div class="tl-line" *ngIf="i < jobs.length - 1"></div>
+        </div>
+
+        <div class="tl-card card">
+          <div class="tl-header">
+            <div class="tl-left">
+              <div class="tl-badge" *ngIf="job.current">
+                <span class="badge-dot"></span> Currently Here
+              </div>
+              <h3 class="tl-title">{{ job.title }}</h3>
+              <div class="tl-company">{{ job.company }}</div>
+              <div class="tl-meta">
+                <span class="tl-loc">📍 {{ job.location }}</span>
+                <span class="tl-sep">·</span>
+                <span class="tl-mode">{{ job.mode }}</span>
+              </div>
+            </div>
+            <div class="tl-period">{{ job.period }}</div>
+          </div>
+
+          <ul class="tl-bullets">
+            <li *ngFor="let b of job.bullets">
+              <span class="bullet-arrow">▸</span> {{ b }}
+            </li>
+          </ul>
+
+          <div class="tl-stack">
+            <span class="tag" *ngFor="let t of job.stack">{{ t }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="timeline-item">
+        <div class="tl-connector">
+          <div class="tl-dot edu"></div>
+        </div>
+        <div class="tl-card card edu-card">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <h3 class="tl-title">Bachelor of Engineering — Computer Science</h3>
+            <div class="tl-company">University of Kashmir</div>
+            <div class="tl-period-inline">2012 – 2016</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

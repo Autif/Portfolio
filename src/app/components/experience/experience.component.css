@@ -1,0 +1,152 @@
+.experience { background: var(--navy-mid); }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.tl-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 28px;
+  flex-shrink: 0;
+}
+
+.tl-dot {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--slate-light);
+  border: 2px solid var(--silver-dim);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.tl-dot.current {
+  background: var(--cyan);
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5);
+}
+.tl-dot.edu {
+  background: var(--slate-light);
+  border-color: rgba(255, 179, 71, 0.6);
+}
+
+.tl-line {
+  width: 2px;
+  flex: 1;
+  background: rgba(0, 212, 255, 0.1);
+  min-height: 32px;
+}
+
+.tl-card {
+  flex: 1;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.tl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.tl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cyan);
+  background: var(--cyan-glow);
+  border: 1px solid rgba(0,212,255,0.2);
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+.badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  animation: pulse 2s infinite;
+}
+
+.tl-title {
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.tl-company {
+  font-size: 1rem;
+  color: var(--cyan);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.tl-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--silver-dim);
+}
+.tl-sep { opacity: 0.4; }
+
+.tl-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--silver-dim);
+  white-space: nowrap;
+  background: rgba(255,255,255,0.04);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+
+.tl-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tl-bullets li {
+  display: flex;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--silver);
+  line-height: 1.65;
+}
+.bullet-arrow { color: var(--cyan); flex-shrink: 0; }
+
+.tl-stack { display: flex; flex-wrap: wrap; gap: 6px; }
+
+/* ─── Education ─── */
+.edu-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 32px;
+}
+.edu-icon { font-size: 2rem; }
+.tl-period-inline {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--silver-dim);
+  margin-top: 4px;
+}
+
+@media (max-width: 680px) {
+  .tl-header { flex-direction: column; gap: 12px; }
+  .tl-period { align-self: flex-start; }
+}

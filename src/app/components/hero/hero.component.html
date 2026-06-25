@@ -1,0 +1,97 @@
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="grid-overlay"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Available for Projects
+      </div>
+
+      <h1 class="hero-name">
+        Autif <span class="cyan">Shafi</span>
+      </h1>
+
+      <div class="hero-title-wrap">
+        <span class="prompt">$</span>
+        <span class="hero-title">{{ displayedTitle }}</span>
+        <span class="cursor" [class.hidden]="!cursorVisible">█</span>
+      </div>
+
+      <p class="hero-desc">
+        I architect enterprise-scale examination and learning platforms from the ground up —
+        handling complex business logic, high-concurrency backends, AI grading pipelines,
+        and real-time proctoring systems.
+      </p>
+
+      <div class="hero-actions">
+        <button class="btn btn-primary" (click)="scrollTo('projects')">
+          View My Work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <button class="btn btn-outline" (click)="scrollTo('contact')">
+          Get In Touch
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat" *ngFor="let s of stats">
+          <div class="stat-value">{{ s.value }}</div>
+          <div class="stat-label">{{ s.label }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="terminal">
+        <div class="terminal-header">
+          <div class="term-dots">
+            <span class="dot-r"></span>
+            <span class="dot-y"></span>
+            <span class="dot-g"></span>
+          </div>
+          <span class="term-title">autif&#64;portfolio ~ zsh</span>
+        </div>
+        <div class="terminal-body">
+          <div class="term-cmd">
+            <span class="term-prompt">❯</span>
+            <span class="term-text"> whoami --verbose</span>
+          </div>
+          <div class="term-line" *ngFor="let line of terminalLines; let i = index"
+               [style.animation-delay]="(i * 0.15 + 0.3) + 's'">
+            <span class="term-key">{{ line.text }}</span>
+            <span class="term-sep"> : </span>
+            <span class="term-val">{{ line.value }}</span>
+          </div>
+          <div class="term-cursor-line">
+            <span class="term-prompt">❯</span>
+            <span class="blink">_</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-float">
+        <a href="https://linkedin.com/in/autif-shafi-a7b621142" target="_blank" title="LinkedIn" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/autif" target="_blank" title="GitHub" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+        </a>
+        <a href="mailto:autifshafi92@gmail.com" title="Email" class="social-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" (click)="scrollTo('about')">
+    <span>Scroll</span>
+    <div class="scroll-arrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </div>
+</section>

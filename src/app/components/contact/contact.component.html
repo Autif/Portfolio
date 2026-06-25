@@ -1,0 +1,40 @@
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's build something <span class="cyan">meaningful</span></h2>
+        <div class="accent-line"></div>
+        <p class="contact-text">
+          Whether you need a greenfield platform built, an AI grading pipeline integrated,
+          or a performance audit on an existing system — I'm open to it.
+        </p>
+        <p class="contact-text">
+          I work fully remote and am available for both long-term contracts and focused
+          project engagements. Response time is usually under 24 hours.
+        </p>
+
+        <div class="availability">
+          <span class="avail-dot"></span>
+          <span>Currently accepting new projects</span>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="contact-cards">
+          <div class="contact-card card" *ngFor="let c of contacts">
+            <div class="cc-icon">{{ c.icon }}</div>
+            <div class="cc-body">
+              <div class="cc-label">{{ c.label }}</div>
+              <a *ngIf="c.href" [href]="c.href" [target]="c.href.startsWith('http') ? '_blank' : '_self'" class="cc-value">
+                {{ c.value }}
+              </a>
+              <span *ngIf="!c.href" class="cc-value no-link">{{ c.value }}</span>
+              <div class="cc-desc">{{ c.desc }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
